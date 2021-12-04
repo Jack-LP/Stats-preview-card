@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #090b1a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  object-fit: cover;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  opacity: 0.7;
+  max-width: 540px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "text image";
+  background-color: #1b1938;
+  margin: 200px 420px;
+  border-radius: 15px;
+}
+
+.textSection {
+  grid-area: text;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.textSection {
+  font-family: "Inter", sans-serif;
+}
+
+.textSection p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 25px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.stats p {
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.purple {
+  color: #aa5cdb;
+}
+
+.sideImage {
+  grid-area: image;
+  background-color: #aa5cdb;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+@media only screen and (max-width: 1835px) {
+  .card {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 0.7fr 2fr;
+    grid-template-areas: "image" "text";
+    margin: 100px 50%;
+  }
+
+  img {
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+    max-width: 540px;
+  }
+
+  .textSection {
+    grid-template-rows: 0.6fr 0.6fr 0.8fr;
+  }
+
+  .textSection h1 {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .textSection p {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .sideImage {
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+  }
+
+  .stats {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 20px;
+    text-align: center;
+  }
+
+  .stats h2 {
+    font-size: 2.5rem;
+  }
+
+  .stats p {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style2.css.map */
